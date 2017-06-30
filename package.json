@@ -1,0 +1,14 @@
+{
+  "name": "the-complete-nodejs-developer-course-2",
+  "version": "1.0.0",
+  "description": "The Complete Nodejs Developer Course ===========",
+  "main": "secao_03/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}

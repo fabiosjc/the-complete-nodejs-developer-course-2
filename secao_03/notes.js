@@ -1,13 +1,20 @@
-console.log('Starting node.js')
-//console.log(module);
+// console.log('Starting node.js')
+// console.log(module);
 
-module.exports.age = 25
-
-module.exports.addNote = () => {
-  console.log('addNote')
-  return 'New note'
+var addNote = (title, body) => {
+  console.log('Adding note', title, body)
 }
 
-module.exports.add = (a, b) =>{
-  return a + b
+var getAll = () => {
+  console.log('Getting all notes')
 }
+
+var readNote = (title) => {
+  console.log('Reading note', title)
+}
+
+var removeNote = (title) => {
+  console.log('Removing note', title)
+}
+
+module.exports = { addNote , getAll, readNote, removeNote }

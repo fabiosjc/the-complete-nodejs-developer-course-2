@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.4",
+    "standard": "^10.0.2",
     "yargs": "^4.7.1"
   }
 }

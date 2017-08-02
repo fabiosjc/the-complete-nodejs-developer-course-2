@@ -1,11 +1,11 @@
 console.log('Starting node.js')
 // console.log(module);
-var fs = require('fs');
+var fs = require('fs')
 
 var fetchNotes = () => {
   try {
     var noteStr = fs.readFileSync('notes.json')
-    return JSON.parse(noteStr)    
+    return JSON.parse(noteStr)
   } catch (e) {
     return []
   }
@@ -21,14 +21,14 @@ var addNote = (title, body) => {
     title,
     body
   }
-  
-  var duplicateNotes = notes.filter((note) => note.title === title);
+
+  var duplicateNotes = notes.filter((note) => note.title === title)
 
   if (duplicateNotes.length === 0) {
     notes.push(note)
     saveNotes(notes)
     return note
-  }  
+  }
 }
 
 var getAll = () => {
@@ -40,10 +40,10 @@ var readNote = (title) => {
 }
 
 var removeNote = (title) => {
-  var notes = fetchNotes()  
+  var notes = fetchNotes()
   var filterdNotes = notes.filter((note) => note.title !== title)
   saveNotes(filterdNotes)
   return notes.length !== filterdNotes.length
 }
 
-module.exports = { addNote , getAll, readNote, removeNote }
+module.exports = { addNote, getAll, readNote, removeNote }
